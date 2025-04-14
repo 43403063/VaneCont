@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Accounting System</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/plan.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo y título -->
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="Logo Sistema Contable" class="logo" />
+                <h1>Sistema Contable</h1>
+            </div>
+
+            <div class="header-actions">
+                <!-- Botón para modo dark -->
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <img src="img/svg/moon.svg" alt="Modo Dark" class="dark-mode-icon" />
+                </button>
+                <!-- Botón hamburguesa con SVG -->
+                <button class="menu-toggle" id="menuToggle">
+                    <img src="img/svg/bars-solid.svg" alt="Menú" class="hamburger-icon" />
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Barra lateral (sidebar) -->
+        <nav id="sidebarNav">
+            <ul>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="PlanCuentas.html">Cuentas</a></li>
+                <li><a href="Transacciones.html">Transacciones</a></li>
+                <li><a href="#">Reportes</a></li>
+                <li><a href="#" id="logoutBtn">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <div class="greeting" id="greeting">
+                <!-- Aquí se mostrará el saludo al usuario -->
+            </div>
+            <div class="card">
+                <!-- CONTENIDO -->
+                <h1>Plan de Cuentas</h1>
+
+                <!-- Contenedor para mostrar errores -->
+                <div id="errorContainer" class="error-container" style="display: none;">
+                    <ul id="errorList"></ul>
+                </div>
+
+                <!-- Formulario para crear o actualizar una cuenta -->
+                <form id="cuentaForm">
+
+                    <div class="form-group">
+                        <label for="codeInput">Código:</label>
+                        <input type="text" id="codeInput" maxlength="5" placeholder="Código" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descriptionInput">Descripción:</label>
+                        <input type="text" id="descriptionInput" maxlength="200" placeholder="Descripción" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoriaSelect">Categoría:</label>
+                        <select id="categoriaSelect" required>
+                          <option value="" disabled selected>Seleccione una Categoría</option>
+                          <option value="A">ACTIVO (A)</option>
+                          <option value="P">PASIVO (P)</option>
+                          <option value="N">NATURALEZA (N)</option>
+                          <option value="F">FUNCION (F)</option>
+                          <option value="R">RESULTADO (R)</option>
+                        </select>
+                      </div>
+                      
+                    <div class="btn-container">
+                        <button type="submit" id="addBtn" class="btn-success">Crear</button>
+                        <button type="button" id="updateBtn" class="hidden btn-success">Actualizar</button>
+                        <button type="button" id="cancelBtn" class="hidden btn-danger">Cancelar</button>
+                    </div>
+
+                </form>
+
+                </br>
+                <!-- Tabla para mostrar las cuentas con paginación -->
+                <div class="table-responsive">
+                    <table id="cuentasTable">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <!-- Paginación -->
+                <div class="pagination">
+                    <button id="prevBtn" class="btn-info">Anterior</button>
+                    <span id="pageIndicator"></span>
+                    <button id="nextBtn" class="btn-info">Siguiente</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Importar nuestras clases y datos -->
+    <script src="js/LocalStorage.js"></script>
+    <script src="js/Modelos/PlanCuenta.js"></script>
+    <script src="js/Data/PlanCuentasData.js"></script>
+
+    <script src="js/ApiBase.js"></script>
+    <script src="js/Dashboard.js"></script>
+    <script src="js/PlanCuentasManager.js"></script>
+
+
+</body>

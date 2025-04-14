@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Accounting System</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/transacciones.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo y título -->
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="Logo Sistema Contable" class="logo" />
+                <h1>Sistema Contable</h1>
+            </div>
+
+            <div class="header-actions">
+                <!-- Botón para modo dark -->
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <img src="img/svg/moon.svg" alt="Modo Dark" class="dark-mode-icon" />
+                </button>
+                <!-- Botón hamburguesa con SVG -->
+                <button class="menu-toggle" id="menuToggle">
+                    <img src="img/svg/bars-solid.svg" alt="Menú" class="hamburger-icon" />
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Barra lateral (sidebar) -->
+        <nav id="sidebarNav">
+            <ul>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="PlanCuentas.html">Cuentas</a></li>
+                <li><a href="Transacciones.html">Transacciones</a></li>
+                <li><a href="#">Reportes</a></li>
+                <li><a href="#" id="logoutBtn">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <div class="greeting" id="greeting">
+                <!-- Aquí se mostrará el saludo al usuario -->
+            </div>
+            <div class="card">
+                <!-- CONTENIDO -->
+                <h1>Transacciones</h1>
+                <!-- Puedes agregar enlaces para navegar al CRUD en otra página -->
+                <p><a href="CrudTransacciones.html" class="a-btn-info">Nuevo Asiento</a></p>
+                <div class="table-responsive">
+                    <table id="transaccionesTable">
+                        <thead>
+                            <tr>
+                                <th>N° Asiento</th>
+                                <th>Fecha</th>
+                                <th>Glosa</th>
+                                <th>Total Debe</th>
+                                <th>Total Haber</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se cargarán los asientos aquí -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Modal -->
+                <div id="detalleModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Detalle del Asiento</h2>
+                        <div id="detalleContenido"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Importar nuestras clases y datos -->
+    <script src="js/LocalStorage.js"></script>
+    <script src="js/Modelos/Detalle.js"></script>
+    <script src="js/Modelos/Asiento.js"></script>
+
+    <script src="js/ApiBase.js"></script>
+    <script src="js/Dashboard.js"></script>
+    <script src="js/TransaccionesManager.js"></script>
+
+</body>

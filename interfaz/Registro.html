@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Vane-Contable</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registro de Prueba Gratis</h1>
+        <!-- Contenedor para mostrar errores -->
+        <div id="errorContainer" class="error-container" style="display: none;">
+            <ul id="errorList"></ul>
+        </div>
+
+        <form id="registroForm">
+            <!-- Datos de la empresa -->
+            <h2 class="seccion-titulo">Datos de la Empresa</h2>
+            <input type="text" id="empresaRuc" placeholder="Ruc de la Empresa" required>
+            <input type="text" id="empresaNombre" placeholder="Nombre de la Empresa" required>
+            <input type="text" id="empresaTelefono" placeholder="Telefono de la Empresa">
+            <input type="text" id="empresaDireccion" placeholder="Direccion de la Empresa">
+            <!-- Datos del usuario -->
+            <h2 class="seccion-titulo">Datos del Usuario</h2>
+            <input type="text" id="usuarioNombre" placeholder="Nombre de Usuario" required>
+            <input type="email" id="usuarioEmail" placeholder="Email" required>
+            <input type="password" id="usuarioContrasena" placeholder="Contraseña" required>
+            <button type="submit" class="btn-info">Registrar</button>
+        </form>
+        <a href="Index.html" class="btn-back">Volver a Inicio</a>
+
+    </div>
+
+
+    <!-- Se incluyen los archivos JavaScript -->
+    <!--<script src="js/LocalStorage.js"></script> -->
+    <script src="js/ApiBase.js"></script>
+    <script src="js/Modelos/Usuario.js"></script>
+    <script src="js/Modelos/Empresa.js"></script>
+    <script src="js/RegistroManager.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Accounting System</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo y título -->
+      <div class="logo-container">
+        <img src="img/logo.jpg" alt="Logo Sistema Contable" class="logo" />
+        <h1>Sistema Contable</h1>
+      </div>
+
+      <div class="header-actions">
+        <!-- Botón para modo dark -->
+        <button class="dark-mode-toggle" id="darkModeToggle">
+          <img src="img/svg/moon.svg" alt="Modo Dark" class="dark-mode-icon" />
+        </button>
+        <!-- Botón hamburguesa con SVG -->
+        <button class="menu-toggle" id="menuToggle">
+          <img src="img/svg/bars-solid.svg" alt="Menú" class="hamburger-icon" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Barra lateral (sidebar) -->
+    <nav id="sidebarNav">
+      <ul>
+        <li><a href="Dashboard.html">Dashboard</a></li>
+        <li><a href="PlanCuentas.html">Cuentas</a></li>
+        <li><a href="Transacciones.html">Transacciones</a></li>
+        <li><a href="#">Reportes</a></li>
+        <li><a href="#" id="logoutBtn">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+      <div class="greeting" id="greeting">
+        <!-- Aquí se mostrará el saludo al usuario -->
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3 id="h3">800.00</h3>
+          <p>Ingresos Totales</p>
+        </div>
+        <div class="card">
+          <h3 id="h3">200.00</h3>
+          <p>Gastos Totales</p>
+        </div>
+        <div class="card">
+          <h3 id="h3">600.00</h3>
+          <p>Ingresos Netos</p>
+        </div>
+      </div>
+      <!-- Aquí podrías implementar la gráfica de Ingresos vs Gastos -->
+    </div>
+  </div>
+
+  <!-- Scripts de clases -->
+  <script src="js/LocalStorage.js"></script>
+  <script src="js/Dashboard.js"></script>
+</body>
+
+</html>

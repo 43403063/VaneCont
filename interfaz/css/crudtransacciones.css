@@ -1,0 +1,182 @@
+
+
+    /* ====== FORMULARIO ====== */
+
+    .contact-us-form {
+      padding: 0.2rem;
+      display: grid;
+      grid-auto-rows: 3rem;
+      grid-row-gap: 0.5rem;
+
+    }
+
+    .contact-us-form label {
+      font-weight: bold;
+      margin: 2rem 0rem 0.3rem;
+    }
+
+
+
+    label[for="asientoId"] {
+      grid-row: 1
+    }
+
+    #asientoId {
+      grid-row: 2
+    }
+
+    label[for="asientoFecha"] {
+      grid-row: 3
+    }
+
+    #asientoFecha {
+      grid-row: 4
+    }
+
+    label[for="asientoGlosa"] {
+      grid-row: 5
+    }
+
+    #asientoGlosa {
+      grid-row: 6
+    }
+
+    form h3 {
+      grid-row: 7
+    }
+
+    #addDetailBtn {
+      grid-row: 8
+    }
+
+    .table-responsive {
+      grid-row: 9 / span 5;
+    }
+
+    @media (min-width: 40rem) {
+      .contact-us-form {
+        grid-column-gap: 1rem;
+      }
+
+      label[for="asientoId"] {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2
+      }
+
+      #asientoId {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+      }
+
+      label[for="asientoFecha"] {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+
+      #asientoFecha {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+
+      label[for="asientoGlosa"] {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+      }
+
+      #asientoGlosa {
+        grid-row: 2 / 3;
+        grid-column: 3 / 6;
+      }
+
+      form h3 {
+        grid-row: 3 / 4;
+        grid-column: 1 / 6;
+      }
+
+      #addDetailBtn {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+      }
+
+      .table-responsive {
+        grid-row: 5 / 12;
+        grid-column: 1 / 6;
+      }
+
+      form button[type="submit"] {
+        grid-row: 12 / 13;
+        grid-column: 1 / 3;
+      }
+
+      #cancelEditBtn {
+        grid-row: 12 / 13;
+        grid-column: 3 / 6;
+      }
+
+    }
+
+
+    /* ====== Tabla Responsiva ====== */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    #detallesTable {
+      width: 100%;
+      min-width: 800px;
+      /* Ajusta este valor según el ancho mínimo deseado */
+      table-layout: fixed;
+      /* Para que los anchos definidos se respeten */
+      border-collapse: collapse;
+    }
+
+    #detallesTable th {
+      border: 1px solid #ccc;
+      padding: 0.4rem;
+      text-align: center;
+    }
+
+
+    #detallesTable td {
+      border: 1px solid #ccc;
+      padding: 0.4rem;
+      text-align: left;
+    }
+
+    /* Aplica a todos los inputs dentro de la tabla de detalles */
+    #detallesTable td input {
+      width: 95%;
+      box-sizing: border-box;
+      /* Asegura que padding y borde se incluyan en el ancho total */
+      border-radius: 0.3rem;
+      /* Opcional: da un poco de espacio interno */
+      border: 1px solid #ccc;
+      /* Opcional: estilo de borde */
+      outline: none;
+      /* Opcional: quita el contorno al enfocar */
+    }
+
+
+    /* Estilo para el botón de quitar con ícono */
+    .btn-remove {
+      background: #dc3545;
+      /* Sin fondo */
+      border: none;
+      border-radius: 0.2rem;
+      /* Sin borde */
+      cursor: pointer;
+      color: #fff;
+      /* Color rojo para indicar acción de eliminar */
+      display: inline-flex;
+      /* Para centrar el contenido */
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem;
+      transition: color 0.3s ease;
+    }
+
+    .btn-remove:hover {
+      color: #a71d2a;
+      /* Color un poco más oscuro al hacer hover */
+    }

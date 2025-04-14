@@ -1,0 +1,28 @@
+const initialPlanCuentasData = [
+    { code: "10", description: "EFECTIVO Y EQUIVALENTES DE EFECTIVO" },   
+    { code: "12", description: "CUENTAS POR COBRAR COMERCIALES TERCEROS" },   
+    { code: "14", description: "CUENTAS POR COBRAR AL PERSONAL, A LOS ACCIONISTAS (SOCIOS) y DIRECTORES" },    
+    { code: "20", description: "MERCADERÍAS" },   
+    { code: "33", description: "PROPIEDAD, PLANTA Y EQUIPO" },  
+    { code: "40", description: "TRIBUTOS, CONTRAPRESTACIONES Y APORTES AL SISTEMA PÚBLICO DE PENSIONES Y DE SALUD POR PAGAR" },   
+    { code: "41", description: "REMUNERACIONES Y PARTICIPACIONES POR PAGAR" },   
+    { code: "42", description: "CUENTAS POR PAGAR COMERCIALES TERCEROS" },  
+    { code: "45", description: "OBLIGACIONES FINANCIERAS" },   
+    { code: "50", description: "CAPITAL" },   
+    { code: "60", description: "COMPRAS" },   
+    { code: "61", description: "VARIACIÓN DE INVENTARIOS" },  
+    { code: "62", description: "GASTOS DE PERSONAL Y DIRECTORES" },
+    { code: "621", description: "Remuneraciones" },  
+    { code: "63", description: "GASTOS DE SERVICIOS PRESTADOS POR TERCEROS" },  
+    { code: "66", description: "PERDIDA POR MEDICIÓN DE ACTIVOS NO FINANCIEROS AL VALOR RAZONABLE" },    
+    { code: "67", description: "GASTOS FINANCIEROS" },   
+    { code: "70", description: "VENTAS" },   
+    { code: "77", description: "INGRESOS FINANCIEROS" },
+    { code: "79", description: "CARGAS IMPUTABLES A CUENTAS DE COSTOS Y GASTOS" },   
+    { code: "90", description: "COSTO DE PRODUCCIÓN" },  
+    { code: "94", description: "GASTOS ADMINISTRATIVOS" },  
+    { code: "95", description: "GASTOS DE VENTAS" },    
+    { code: "97", description: "GASTOS FINANCIEROS" },
+    
+  ];
+  

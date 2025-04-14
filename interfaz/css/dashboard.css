@@ -1,0 +1,292 @@
+/* ------------- RESET Y ESTILOS BÁSICOS ------------- */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #4A90E2;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Contenedor del header para alinear logo y botón */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo y título */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+/* Botón para Modo Dark */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-mode-icon, .hamburger-icon {
+    width: 24px;
+    height: auto;
+    filter: invert(39%) sepia(88%) saturate(2220%) hue-rotate(182deg) brightness(94%) contrast(91%);
+}
+
+.dark-mode-toggle:hover .dark-mode-icon {
+    transform: scale(1.1);
+}
+
+
+/* Botón hamburguesa (oculto por defecto en pantallas grandes) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.menu-toggle:hover .hamburger-icon {
+    transform: scale(1.1);
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 110px);
+    ;
+}
+
+/* Barra lateral (sidebar) */
+nav {
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    width: 220px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 1rem;
+}
+
+/* Botones del Sidebar */
+nav li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #4A90E2;
+    text-decoration: none;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid transparent;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+nav li a:hover {
+    background: #4A90E2;
+    color: #fff;
+    transform: translateX(5px);
+}
+/* Contenido */
+.content {
+    flex: 1;
+    padding: 1rem;
+    background-color: #f7f7f7;
+}
+
+.greeting {
+    background: #fff;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    animation: fadeIn 0.8s ease;
+}
+
+#h3 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* ------------- MODO DARK ------------- */
+body.dark-mode {
+    background: #333;
+    color: #eee;
+}
+
+body.dark-mode header {
+    background-color: #444;
+    border-bottom-color: #4A90E2;
+}
+
+body.dark-mode .logo-container h1 {
+    color: #eee;
+}
+
+body.dark-mode nav {
+    background-color: #444;
+    border-right-color: #555;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+body.dark-mode nav li a {
+    color: #4A90E2;
+    background: transparent;
+    border-color: transparent;
+}
+
+body.dark-mode nav li a:hover {
+    background: #4A90E2;
+    color: #fff;
+}
+
+body.dark-mode .content {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .greeting,
+body.dark-mode .card {
+    background: #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .btn-info {
+    background: #357ABD; /* un tono más oscuro o modificado */
+}
+
+body.dark-mode .btn-info:hover {
+    background: #2a6aa3;
+}
+
+body.dark-mode .btn-success {
+    background: #2ecc71;  /* Verde vibrante para modo dark */
+}
+
+body.dark-mode .btn-success:hover {
+    background: #27ae60;
+}
+
+body.dark-mode .btn-danger {
+    background: #e74c3c;  /* Rojo intenso para modo dark */
+}
+
+body.dark-mode .btn-danger:hover {
+    background: #c0392b;
+}
+
+body.dark-mode .btn-warning {
+    background: #f39c12;  /* Naranja dorado para modo dark */
+}
+
+body.dark-mode .btn-warning:hover {
+    background: #e67e22;
+}
+
+
+/* ------------- MEDIA QUERIES PARA RESPONSIVE ------------- */
+
+/* Para pantallas pequeñas (ej: <= 768px) */
+@media (max-width: 768px) {
+
+    /* El botón hamburguesa se muestra en pantallas pequeñas */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Cambiamos la disposición principal a columnas, para que el contenido
+       quede debajo del header y nav se oculte o se muestre con transform */
+    .main-container {
+        flex-direction: column;
+    }
+
+    /* Ocultamos el nav desplazándolo a la izquierda con transform.
+       Sólo cuando tenga la clase "open" se mostrará */
+    nav {
+        position: absolute;
+        top: 4rem;
+        /* debajo del header */
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        width: 200px;
+        z-index: 999;
+        /* para que quede encima del contenido */
+    }
+
+    /* Cuando nav tenga la clase .open, lo traemos a la vista */
+    nav.open {
+        transform: translateX(0);
+    }
+
+    /* El contenido se hace "full width" cuando el nav está cerrado */
+    .content {
+        margin-left: 0;
+    }
+}

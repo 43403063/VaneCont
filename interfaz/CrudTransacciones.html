@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Accounting System</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/crudtransacciones.css">
+    <link rel="stylesheet" href="css/alert.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo y título -->
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="Logo Sistema Contable" class="logo" />
+                <h1>Sistema Contable</h1>
+            </div>
+
+            <div class="header-actions">
+                <!-- Botón para modo dark -->
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <img src="img/svg/moon.svg" alt="Modo Dark" class="dark-mode-icon" />
+                </button>
+                <!-- Botón hamburguesa con SVG -->
+                <button class="menu-toggle" id="menuToggle">
+                    <img src="img/svg/bars-solid.svg" alt="Menú" class="hamburger-icon" />
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <!-- Barra lateral (sidebar) -->
+        <nav id="sidebarNav">
+            <ul>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="PlanCuentas.html">Cuentas</a></li>
+                <li><a href="Transacciones.html">Transacciones</a></li>
+                <li><a href="#">Reportes</a></li>
+                <li><a href="#" id="logoutBtn">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <div class="greeting" id="greeting">
+                <!-- Aquí se mostrará el saludo al usuario -->
+            </div>
+            <div class="card">
+                <!-- CONTENIDO -->
+                <!--<h2>CRUD Transacciones - Asientos Contables</h1> -->
+                <h3 id="modoTitulo">Registrar Asiento</h2>
+
+                    <!-- Contenedor para mostrar errores -->
+                    <div id="errorContainer" class="error-container" style="display: none;">
+                        <ul id="errorList"></ul>
+                    </div>
+                    <!-- Formulario para crear o editar un asiento -->
+                    <form id="asientoForm" class="contact-us-form">
+
+                        <label for="asientoId">N° Asiento:</label>
+                        <input type="text" id="asientoId" placeholder="Número de Asiento" required readonly>
+
+                        <label for="asientoFecha">Fecha:</label>
+                        <input type="date" id="asientoFecha" required>
+
+                        <label for="asientoGlosa">Glosa:</label>
+                        <input type="text" id="asientoGlosa" placeholder="Glosa" required>
+
+                        <h3>Detalles</h3>
+                        <button type="button" id="addDetailBtn" class="btn-info">Agregar Detalle</button>
+                        <!-- Tabla para ingresar detalles -->
+                        <div class="table-responsive">
+                            <table id="detallesTable">
+                                <colgroup>
+                                    <!-- Ajusta los porcentajes según tus necesidades -->
+                                    <col style="width: 5%;">
+                                    <col style="width: 10%;">
+                                    <col style="width: 45%;">
+                                    <col style="width: 15%;">
+                                    <col style="width: 15%;">
+                                    <col style="width: 10%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>N°</th>
+                                        <th>Cuenta</th>
+                                        <th>Descripción</th>
+                                        <th>Importe Debe S/</th>
+                                        <th>Importe Haber S/</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Se agregarán filas dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <button type="submit" id="saveAsientoBtn" class="btn-success">Guardar</button>
+                        <button type="button" id="cancelEditBtn" class="btn-danger">Cancelar</button>
+
+
+                    </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- alert personalizable -->
+    <div id="customAlert" class="custom-alert-overlay">
+        <div class="custom-alert-box" id="customAlertBox">
+            <h2 id="customAlertTitle"></h2>
+            <p id="customAlertMessage"></p>
+            <div id="customAlertButtons"></div>
+        </div>
+    </div>
+
+    <!-- Importar nuestras clases y datos -->
+    <script src="js/LocalStorage.js"></script>
+    <script src="js/Modelos/Asiento.js"></script>
+    <script src="js/Modelos/Detalle.js"></script>
+
+    <script src="js/Base.js"></script>
+    <script src="js/ApiBase.js"></script>
+    <script src="js/Dashboard.js"></script>
+    <script src="js/CrudTransaccionesManager.js"></script>
+
+    <script src="js/Alert.js"></script>
+
+</body>

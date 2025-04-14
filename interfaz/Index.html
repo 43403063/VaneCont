@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Contable - Simplifica tu Contabilidad</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <!-- LOGO + Título -->
+            <div class="logo-section">
+                <img src="img/logo.jpg" alt="Logo CONTABLE" class="logo" />
+                <h1>VANE-CONTABLE</h1>
+            </div>
+            <!-- Menú de navegación -->
+            <nav id="nav-menu">
+                <a href="#beneficios">Beneficios</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="login.html" class="btn">
+                    <img src="img/svg/sign-in-alt-solid.svg" alt="Icono Iniciar Sesión" class="icon" />
+                    Iniciar Sesión
+                  </a>
+            </nav>
+
+            <!-- Ícono hamburguesa para pantallas pequeñas -->
+            <div class="hamburger" id="hamburger">
+                <img src="img/svg/bars-solid.svg" alt="Menú" class="hamburger-icon" />
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="background: url(img/portada.jpg) center/cover no-repeat; ">
+        <div class="container">
+            <h2>SIMPLIFICA TU CONTABILIDAD</h2>
+            <p>La solución contable inteligente para autónomos y empresas. Gestiona tus finanzas de forma fácil, rápida
+                y segura.</p>
+            <a href="registro.html" class="btn">Prueba Gratis</a>
+        </div>
+    </section>
+
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <h2>Beneficios Clave</h2>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <img src="img/automatizacion.jpeg" alt="Automatización">
+                    <h3>Automatización</h3>
+                    <p>Optimiza tus registros contables y reduce errores.</p>
+                </div>
+                <div class="benefit">
+                    <img src="img/cumplimiento.jpg" alt="Cumplimiento">
+                    <h3>Cumplimiento</h3>
+                    <p>Normativas fiscales al día sin esfuerzo.</p>
+                </div>
+                <div class="benefit">
+                    <img src="img/accesibilidad.jpg" alt="Accesibilidad">
+                    <h3>Accesibilidad</h3>
+                    <p>Accede a tu contabilidad desde cualquier dispositivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonios-list">
+            <div class="testimonial">
+                <p>“Mi contabilidad es más fácil y dedico más tiempo a hacer crecer mi negocio”</p>
+                <div class="cliente">
+                    <img src="img/juan.jpg" alt="Juan Perez">
+                    <div>
+                        <strong>Juan Perez</strong>
+                        <span>Analista Financiero</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>“No soy contador y ahora entiendo mejor mis finanzas. ¡Recomendado al 100%!”</p>
+                <div class="cliente">
+                    <img src="img/jose.jpg" alt="Jose Ramos">
+                    <div>
+                        <strong>Jose Ramos</strong>
+                        <span>Gerente de Ventas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>“Una plataforma intuitiva y eficiente. Me ha ahorrado horas de trabajo cada mes”</p>
+                <div class="cliente">
+                    <img src="img/diana.jpg" alt="Diana Mendoza">
+                    <div>
+                        <strong>Diana Mendoza</strong>
+                        <span>Asistente Contable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vane-Contable. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para el toggle del menú en pantallas pequeñas -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
