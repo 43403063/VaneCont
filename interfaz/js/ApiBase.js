@@ -1,6 +1,6 @@
 class ApiBase {
     constructor(baseURL) {
-        this.baseURL = baseURL || 'http://smarter1riqsiy-001-site5.ktempurl.com/api';
+        this.baseURL = baseURL || 'https://smarter1riqsiy-001-site5.ktempurl.com/api';
     }
 
     // Método para obtener los encabezados con token si existe
